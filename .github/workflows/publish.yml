@@ -8,6 +8,7 @@ on:
       - '.github/workflows/publish.yml'
       - 'build.gradle.kts'
       - 'settings.gradle.kts'
+  workflow_dispatch:
 
 jobs:
   publish:

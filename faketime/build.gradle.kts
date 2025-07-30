@@ -34,8 +34,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/matcha4smiley/faKeTime")
             credentials {
-                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
+                username = System.getenv("GPR_USER") ?: project.findProperty("gpr.user") as String?
+                password = System.getenv("GPR_KEY") ?: System.getenv("GITHUB_TOKEN") ?: project.findProperty("gpr.key") as String?
             }
         }
     }

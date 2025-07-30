@@ -31,11 +31,11 @@ publishing {
     }
     repositories {
         maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/matcha4smiley/faKeTime")
+            name = "CentralPortal"
+            url = uri("https://central.sonatype.com/api/v1/publish")
             credentials {
-                username = System.getenv("GPR_USER") ?: project.findProperty("gpr.user") as String?
-                password = System.getenv("GPR_KEY") ?: System.getenv("GITHUB_TOKEN") ?: project.findProperty("gpr.key") as String?
+                username = project.findProperty("centralUsername") as String? ?: System.getenv("CENTRAL_USERNAME")
+                password = project.findProperty("centralPassword") as String? ?: System.getenv("CENTRAL_PASSWORD")
             }
         }
     }

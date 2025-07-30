@@ -21,11 +21,21 @@ tasks.test {
 
 publishing {
     publications {
-        create<MavenPublication>("maven") {
+        create<MavenPublication>("faketime") {
             from(components["java"])
-            groupId = project.group.toString()
+            groupId = "io.github.matcha4smiley"
             artifactId = "faketime"
-            version = project.version.toString()
+            version = "0.1.0"
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/matcha4smiley/faKeTime")
+            credentials {
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
+            }
         }
     }
 }

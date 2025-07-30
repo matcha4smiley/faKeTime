@@ -44,10 +44,30 @@ dependencies {
 
 ## 📅 Roadmap
 
-- ✅ GitHub Packages initial release
-- ✅ Core: `FakeDateTime.fixed(...)`
-- 🚧 Support for UNIX timestamp, `Clock`, `ZonedDateTime`
-- 🚧 Kotlin Multiplatform support (future)
+> 🚧 This library is under active development.  
+> Here's what's been done and what's coming next!
+
+### ✅ Released
+- ✅ GitHub Packages: Initial release (`0.1.0`)
+- ✅ Core API: `FakeDateTime.fixed(...)`
+
+---
+
+### 🛠️ In Progress
+- 🚧 `FakeDateTime.tick(interval: Duration)` – Automatically advance time by fixed intervals
+- 🚧 `FakeDateTime.shift(duration: Duration)` – Manually move time forward/backward
+- 🚧 Support for:
+    - Instant
+    - LocalDateTime
+    - ZonedDateTime
+    - UNIX timestamp (as Long)
+- 🚧 Core methods:
+    - `unixTime()`
+    - `toEpochMilli()`
+    - `toIso8601String()`
+
+### 📦 Distribution
+- ✅ GitHub Packages support
 - 🚧 Publish to Maven Central
 
 ---

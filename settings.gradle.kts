@@ -1,4 +1,4 @@
-rootProject.name = "faketime"
+rootProject.name = "faKeTime"
 
-include("faketime-core")
-include("faketime-sample")
+include("faketime")
+include("sample")

@@ -31,11 +31,14 @@ publishing {
     }
     repositories {
         maven {
-            name = "CentralPortal"
-            url = uri("https://central.sonatype.com/api/v1/publish")
-            credentials {
-                username = project.findProperty("centralUsername") as String? ?: System.getenv("CENTRAL_USERNAME")
-                password = project.findProperty("centralPassword") as String? ?: System.getenv("CENTRAL_PASSWORD")
+            name = "centralPortal"
+            url = uri("https://central.sonatype.com/api/v1/publisher/deployments/download/")
+            credentials(HttpHeaderCredentials::class) {
+                name = System.getenv("CENTRAL_AUTH_HEADER_NAME")
+                value = System.getenv("CENTRAL_AUTH_HEADER_VALUE")
+            }
+            authentication {
+                create("header", HttpHeaderAuthentication::class)
             }
         }
     }

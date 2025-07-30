@@ -24,8 +24,8 @@ jobs:
       - name: Grant execute permission for Gradle wrapper
         run: chmod +x ./gradlew
 
-      - name: Publish to GitHub Packages
+      - name: Publish to Maven Central
         run: ./gradlew faketime:publish
         env:
-          CENTRAL_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
-          CENTRAL_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
+          CENTRAL_AUTH_HEADER_NAME: Authorization
+          CENTRAL_AUTH_HEADER_VALUE: ${{ secrets.CENTRAL_TOKEN }}

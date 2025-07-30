@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":faketime-core"))
+    implementation(project(":faketime"))
 }
 
 application {

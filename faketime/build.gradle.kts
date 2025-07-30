@@ -24,7 +24,7 @@ publishing {
         create<MavenPublication>("maven") {
             from(components["java"])
             groupId = project.group.toString()
-            artifactId = "faketime-core"
+            artifactId = "faketime"
             version = project.version.toString()
         }
     }

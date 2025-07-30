@@ -6,9 +6,9 @@ Freeze, tick, shift, and format time as you like.
 ## 🚀 Example (planned)
 
 ```kotlin
-val clock = FakeClock.fixed(Instant.parse("2025-07-30T12:00:00Z"))
-clock.instant()     // → 2025-07-30T12:00:00Z
-clock.unixTime()    // → 1753915200
+val fakeDateTime = FakeDateTime.fixed(Instant.parse("2025-07-30T12:00:00Z"))
+fakeDateTime.instant()     // → 2025-07-30T12:00:00Z
+fakeDateTime.unixTime()    // → 1753915200
 ```
 
 ## 📦 Coming Soon

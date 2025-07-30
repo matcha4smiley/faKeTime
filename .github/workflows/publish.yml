@@ -34,4 +34,5 @@ jobs:
       - name: Publish to GitHub Packages
         run: ./gradlew faketime:publish
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GPR_USER: ${{ github.actor }}
+          GPR_KEY: ${{ secrets.GITHUB_TOKEN }}

@@ -1,13 +1,6 @@
 name: Publish to GitHub Packages
 
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - 'faketime/**'
-      - '.github/workflows/publish.yml'
-      - 'build.gradle.kts'
-      - 'settings.gradle.kts'
   workflow_dispatch:
 
 jobs:

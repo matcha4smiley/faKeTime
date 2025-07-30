@@ -17,8 +17,8 @@ fakeDateTime.unixTime()    // → 1753915200
 ```
 
 ## 📅 Roadmap
-- [x] GitHub Packages initial release
-- [x] Core: FakeDateTime.fixed(...)
-- [] Support for UNIX timestamp, Clock, ZonedDateTime
-- [] Kotlin Multiplatform support (future)
-- [] Publish to Maven Central
+- ✅ GitHub Packages initial release
+- ✅ Core: FakeDateTime.fixed(...)
+- 🚧 Support for UNIX timestamp, Clock, ZonedDateTime
+- 🚧 Kotlin Multiplatform support (future)
+- 🚧 Publish to Maven Central

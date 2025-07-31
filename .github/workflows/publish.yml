@@ -1,10 +1,11 @@
-name: Publish to GitHub Packages
+name: Publish to Maven Central
 
 on:
   workflow_dispatch:
 
 jobs:
   publish:
+    name: Publish library manually
     runs-on: ubuntu-latest
 
     permissions:

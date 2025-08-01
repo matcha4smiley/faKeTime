@@ -34,7 +34,7 @@ jobs:
         run: ./gradlew :faketime:publish --no-configuration-cache
 
       - name: Run JReleaser full release
-        run: ./gradlew :faketime:jreleaserFullRelease --no-configuration-cache
+        run: ./gradlew :faketime:jreleaserFullRelease --no-configuration-cache --stacktrace
         env:
           JRELEASER_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           JRELEASER_GPG_SECRET_KEY: ${{ secrets.MAVEN_CENTRAL_GPG_SECRET_KEY }}

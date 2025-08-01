@@ -1,3 +1,5 @@
+import org.jreleaser.gradle.plugin.JReleaserExtension
+
 // faketime-core/build.gradle.kts
 plugins {
     kotlin("jvm") version "1.9.10"
@@ -67,5 +69,8 @@ publishing {
         maven {
             url = layout.buildDirectory.dir("staging-deploy").get().asFile.toURI()
         }
+    }
+    configure<JReleaserExtension> {
+        configFile.set(file("$projectDir/jreleaser.yml"))
     }
 }

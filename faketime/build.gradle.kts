@@ -3,6 +3,8 @@ plugins {
     kotlin("jvm") version "1.9.10"
     `maven-publish`
     signing
+    `java-library`
+    id("org.jreleaser") version "1.19.0"
 }
 
 group = "io.github.matcha4smiley"
@@ -21,7 +23,13 @@ tasks.test {
     useJUnitPlatform()
 }
 
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
 publishing {
+
     publications {
         create<MavenPublication>("faketime") {
             from(components["java"])
@@ -31,13 +39,13 @@ publishing {
 
             pom {
                 name.set("faKeTime")
-                description.set("A Kotlin library to fake time during testing.")
+                description.set("A Kotlin/Java library to fake or freeze time for testing")
                 url.set("https://github.com/matcha4smiley/faKeTime")
-
+                inceptionYear.set("2025")
                 licenses {
                     license {
-                        name.set("The Apache License, Version 2.0")
-                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                        name.set("Apache License, Version 2.0")
+                        url.set("https://www.apache.org/licenses/LICENSE-2.0")
                     }
                 }
                 developers {
@@ -48,31 +56,16 @@ publishing {
                     }
                 }
                 scm {
-                    connection.set("scm:git:git://github.com/matcha4smiley/faKeTime.git")
-                    developerConnection.set("scm:git:ssh://git@github.com:matcha4smiley/faKeTime.git")
+                    connection.set("scm:git:https://github.com/matcha4smiley/faKeTime.git")
+                    developerConnection.set("scm:git:ssh://git@github.com/matcha4smiley/faKeTime.git")
                     url.set("https://github.com/matcha4smiley/faKeTime")
                 }
             }
         }
     }
-
     repositories {
         maven {
-            name = "centralPortal"
-            url = uri("https://central.sonatype.com/api/v1/publisher/deployments")
-            credentials {
-                username = System.getenv("CENTRAL_PORTAL_USERNAME")
-                password = System.getenv("CENTRAL_PORTAL_PASSWORD")
-            }
+            url = layout.buildDirectory.dir("staging-deploy").get().asFile.toURI()
         }
     }
-}
-
-signing {
-    useInMemoryPgpKeys(
-        System.getenv("SIGNING_KEY_ID"),
-        System.getenv("SIGNING_KEY"),
-        System.getenv("SIGNING_PASSWORD")
-    )
-    sign(publishing.publications["faketime"])
 }

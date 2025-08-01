@@ -29,7 +29,7 @@ jobs:
         run: ./gradlew faketime:publish
 
       - name: Run JReleaser full release
-        run: ./gradlew jreleaserFullRelease
+        run: ./gradlew faketime:jreleaserFullRelease
         env:
           CENTRAL_PORTAL_USERNAME: ${{ secrets.CENTRAL_PORTAL_USERNAME }}
           CENTRAL_PORTAL_PASSWORD: ${{ secrets.CENTRAL_PORTAL_PASSWORD }}

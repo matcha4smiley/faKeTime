@@ -1,4 +1,3 @@
----
 project:
   name: faketime
   version: 0.1.0
@@ -12,16 +11,16 @@ project:
 signing:
   active: ALWAYS
   armored: true
-  passphrase: "{{ env.SIGNING_PASSWORD }}"
-  secretKey: "{{ env.SIGNING_KEY }}"
+  passphrase: "{{env.SIGNING_PASSWORD}}"
+  secretKey: "{{env.SIGNING_KEY}}"
 deploy:
   maven:
     mavenCentral:
       active: ALWAYS
       url: https://central.sonatype.com/api/v1/publisher
       authorization: BEARER
-      username: "{{ env.CENTRAL_PORTAL_USERNAME }}"
-      password: "{{ env.CENTRAL_PORTAL_PASSWORD }}"
+      username: "{{env.CENTRAL_PORTAL_USERNAME}}"
+      password: "{{env.CENTRAL_PORTAL_PASSWORD}}"
       sign: true
       checksums: true
       sourceJar: true

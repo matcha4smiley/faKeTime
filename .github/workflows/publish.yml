@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write        # GitHub Releases の作成に必要
+      contents: write
       packages: write
       issues: write
       checks: write
@@ -30,11 +30,8 @@ jobs:
       - name: Set up Gradle
         uses: gradle/gradle-build-action@v3
 
-      - name: Decrypt GPG key
-        run: |
-          echo "$JRELEASER_GPG_SECRET_KEY" | base64 -d > /tmp/secring.gpg
-        env:
-          JRELEASER_GPG_SECRET_KEY: ${{ secrets.JRELEASER_GPG_SECRET_KEY }}
+      - name: Publish artifacts to staging-deploy
+        run: ./gradlew :faketime:publish --no-configuration-cache
 
       - name: Run JReleaser full release
         run: ./gradlew :faketime:jreleaserFullRelease --no-configuration-cache

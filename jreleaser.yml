@@ -7,7 +7,6 @@ project:
   license: Apache-2.0
   links:
     homepage: https://github.com/matcha4smiley/faKeTime
-  gitRootSearch: true
 
 signing:
   active: ALWAYS

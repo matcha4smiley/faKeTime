@@ -1,19 +1,19 @@
+---
 project:
   name: faketime
   version: 0.1.0
-  description: "A Kotlin library to fake time during testing."
+  description: A Kotlin library to fake time during testing.
   authors:
     - matcha4smiley
   license: Apache-2.0
-  website: https://github.com/matcha4smiley/faKeTime
+  links:
+    homepage: https://github.com/matcha4smiley/faKeTime
   gitRootSearch: true
-
 signing:
   active: ALWAYS
   armored: true
   passphrase: "{{ env.SIGNING_PASSWORD }}"
   secretKey: "{{ env.SIGNING_KEY }}"
-
 deploy:
   maven:
     mavenCentral:

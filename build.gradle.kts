@@ -27,6 +27,8 @@ subprojects {
     apply(plugin = "java-library")
     apply(plugin = "maven-publish")
 
+    version = "0.1.0"
+
     tasks.withType<Test> {
         useJUnitPlatform()
     }
@@ -86,7 +88,7 @@ subprojects {
             gitRootSearch = true
             project {
                 name = "faketime"
-                version = project.version.toString()
+                version = "0.1.0"
                 description = "A Kotlin library to fake time during testing"
                 authors = listOf("matcha4smiley")
                 license = "Apache-2.0"

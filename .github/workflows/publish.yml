@@ -25,8 +25,8 @@ jobs:
       - name: Grant execute permission for Gradle wrapper
         run: chmod +x ./gradlew
 
-      - name: Build & publish artifacts to staging
-        run: ./gradlew publish
+      - name: Publish artifacts to local staging dir
+        run: ./gradlew faketime:publish
 
       - name: Run JReleaser full release
         run: ./gradlew jreleaserFullRelease --stacktrace

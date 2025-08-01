@@ -71,3 +71,7 @@ publishing {
         }
     }
 }
+
+extensions.configure<JReleaserExtension>("jreleaser") {
+    configFile.set(rootProject.file("jreleaser.yml"))
+}

@@ -18,15 +18,14 @@ signing:
 deploy:
   maven:
     mavenCentral:
-      sonatype:
-        active: ALWAYS
-        url: https://central.sonatype.com/api/v1/publisher
-        authorization: BEARER
-        username: "{{env.CENTRAL_PORTAL_USERNAME}}"
-        password: "{{env.CENTRAL_PORTAL_PASSWORD}}"
-        sign: true
-        checksums: true
-        sourceJar: true
-        javadocJar: true
-        verifyPom: true
-        applyMavenCentralRules: true
+      active: ALWAYS
+      url: https://central.sonatype.com/api/v1/publisher
+      authorization: BEARER
+      username: "{{env.CENTRAL_PORTAL_USERNAME}}"
+      password: "{{env.CENTRAL_PORTAL_PASSWORD}}"
+      sign: true
+      checksums: true
+      sourceJar: true
+      javadocJar: true
+      verifyPom: true
+      applyMavenCentralRules: true

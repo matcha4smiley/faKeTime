@@ -19,7 +19,7 @@ deploy:
         active: ALWAYS
         url: https://central.sonatype.com/api/v1/publisher
         stagingRepositories:
-          - target/staging-deploy
+          - faketime/target/staging-deploy
         authorization: BEARER
         username: "{{env.CENTRAL_PORTAL_USERNAME}}"
         password: "{{env.CENTRAL_PORTAL_PASSWORD}}"

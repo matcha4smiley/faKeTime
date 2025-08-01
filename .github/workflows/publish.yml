@@ -26,10 +26,10 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build & publish artifacts to staging
-        run: ./gradlew faketime:publish
+        run: ./gradlew publish
 
       - name: Run JReleaser full release
-        run: ./gradlew faketime:jreleaserFullRelease --stacktrace
+        run: ./gradlew jreleaserFullRelease --stacktrace
         env:
           CENTRAL_PORTAL_USERNAME: ${{ secrets.CENTRAL_PORTAL_USERNAME }}
           CENTRAL_PORTAL_PASSWORD: ${{ secrets.CENTRAL_PORTAL_PASSWORD }}

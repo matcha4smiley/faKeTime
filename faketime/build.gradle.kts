@@ -70,7 +70,4 @@ publishing {
             url = layout.buildDirectory.dir("staging-deploy").get().asFile.toURI()
         }
     }
-    configure<JReleaserExtension> {
-        configFile.set(file("$projectDir/jreleaser.yml"))
-    }
 }

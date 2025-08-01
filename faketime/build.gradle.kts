@@ -2,6 +2,7 @@
 plugins {
     kotlin("jvm") version "1.9.10"
     `maven-publish`
+    signing
 }
 
 group = "io.github.matcha4smiley"
@@ -65,4 +66,13 @@ publishing {
             }
         }
     }
+}
+
+signing {
+    useInMemoryPgpKeys(
+        System.getenv("SIGNING_KEY_ID"),
+        System.getenv("SIGNING_KEY"),
+        System.getenv("SIGNING_PASSWORD")
+    )
+    sign(publishing.publications["faketime"])
 }

@@ -4,7 +4,6 @@ import org.jreleaser.gradle.plugin.JReleaserExtension
 plugins {
     kotlin("jvm") version "1.9.10"
     `maven-publish`
-    signing
     `java-library`
     id("org.jreleaser") version "1.19.0"
 }
@@ -67,6 +66,7 @@ publishing {
     }
     repositories {
         maven {
+            name = "localStaging"
             url = layout.buildDirectory.dir("staging-deploy").get().asFile.toURI()
         }
     }

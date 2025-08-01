@@ -7,19 +7,20 @@ project:
   license: Apache-2.0
   links:
     homepage: https://github.com/matcha4smiley/faKeTime
+  gitRootSearch: true
+
 signing:
   active: ALWAYS
   armored: true
   passphrase: "{{env.SIGNING_PASSWORD}}"
   secretKey: "{{env.SIGNING_KEY}}"
+
 deploy:
   maven:
     mavenCentral:
       sonatype:
         active: ALWAYS
         url: https://central.sonatype.com/api/v1/publisher
-        stagingRepositories:
-          - faketime/target/staging-deploy
         authorization: BEARER
         username: "{{env.CENTRAL_PORTAL_USERNAME}}"
         password: "{{env.CENTRAL_PORTAL_PASSWORD}}"

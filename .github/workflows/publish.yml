@@ -26,7 +26,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Publish to Maven Central
-        run: ./gradlew faketime:publish
+        run: ./gradlew faketime:publish --stacktrace
         env:
           CENTRAL_PORTAL_USERNAME: ${{ secrets.CENTRAL_PORTAL_USERNAME }}
           CENTRAL_PORTAL_PASSWORD: ${{ secrets.CENTRAL_PORTAL_PASSWORD }}

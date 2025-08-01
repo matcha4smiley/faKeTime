@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
@@ -37,7 +37,7 @@ jobs:
           JRELEASER_GPG_SECRET_KEY: ${{ secrets.JRELEASER_GPG_SECRET_KEY }}
 
       - name: Run JReleaser full release
-        run: ./gradlew :faketime-core:jreleaserFullRelease --no-configuration-cache
+        run: ./gradlew :faketime:jreleaserFullRelease --no-configuration-cache
         env:
           JRELEASER_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           JRELEASER_GPG_SECRET_KEY: ${{ secrets.JRELEASER_GPG_SECRET_KEY }}

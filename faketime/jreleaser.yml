@@ -15,7 +15,7 @@ signing:
 deploy:
   maven:
     mavenCentral:
-      active: ALWAYS
+      enabled: true
       url: https://central.sonatype.com/api/v1/publisher
       authorization: BEARER
       username: "{{env.CENTRAL_PORTAL_USERNAME}}"

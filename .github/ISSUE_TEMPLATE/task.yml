@@ -1,0 +1,37 @@
+name: Task
+description: Create a task or chore (e.g. refactoring, infra, docs)
+title: "[Task] "
+labels: [chore]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧹 Internal Task
+
+        For chores, small improvements, refactoring, docs, or infrastructure work.
+
+  - type: input
+    id: summary
+    attributes:
+      label: What needs to be done?
+      description: A brief summary of the task.
+      placeholder: Set up Spotless for code formatting
+    validations:
+      required: true
+
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Task Checklist (optional)
+      description: If applicable, break the task into steps.
+      placeholder: |
+        - [ ] Add Spotless plugin
+        - [ ] Configure formatting rules
+        - [ ] Add to CI
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Any extra notes, rationale, or references.
+      placeholder: Internal cleanup, no behavior changes expected.

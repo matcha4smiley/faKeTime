@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📘 Please read our CONTRIBUTING guide
+    url: https://github.com/matcha4smiley/faKeTime/blob/main/CONTRIBUTING.md
+    about: Before creating an issue or pull request, please review our contribution guidelines.
+
+  - name: 💬 Ask a question or start a discussion
+    url: https://github.com/matcha4smiley/faKeTime/discussions
+    about: For general questions, ideas, or anything else that doesn't fit into an issue.

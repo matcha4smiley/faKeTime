@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":faketime"))
+    implementation("io.github.matcha4smiley:faketime:0.1.1")
 }
 
 application {

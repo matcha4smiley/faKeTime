@@ -51,7 +51,7 @@ dependencies {
 > Here's what's been done and what's coming next!
 
 ### ✅ Released
-- ✅ GitHub Packages: Initial release (`0.1.0`)
+- ✅ GitHub Packages: Initial release (`0.1.1`)
 - ✅ Core API: `FakeDateTime.fixed(...)`
 
 ---

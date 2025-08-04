@@ -38,6 +38,16 @@ body:
       description: What did you expect to happen instead?
       placeholder: It should return the fixed instant without error.
 
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Fix Checklist
+      description: Steps or subtasks needed to fix the bug (optional)
+      placeholder: |
+        - [ ] Add failing test case
+        - [ ] Fix bug in FakeTime logic
+        - [ ] Confirm with new test
+
   - type: input
     id: environment
     attributes:

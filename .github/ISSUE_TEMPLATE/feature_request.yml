@@ -34,6 +34,17 @@ body:
       placeholder: Maybe we can add a new `AdjustableFakeTime` interface...
 
   - type: textarea
+    id: checklist
+    attributes:
+      label: Implementation Checklist
+      description: Optional list of tasks required to implement this feature
+      placeholder: |
+        - [ ] Define new interface
+        - [ ] Write implementation
+        - [ ] Add unit tests
+        - [ ] Update documentation
+
+  - type: textarea
     id: additional
     attributes:
       label: Additional context

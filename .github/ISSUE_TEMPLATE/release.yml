@@ -1,0 +1,44 @@
+name: Release Checklist
+description: Track tasks for publishing a new release
+title: "[Release] "
+labels: ["release"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Release version
+      description: What version are you releasing? (e.g., 0.1.1)
+      placeholder: 0.1.1
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary of changes
+      description: What's included in this release? (Features, fixes, etc.)
+      placeholder: |
+        - Add importable typealias for `FakeDateTime`
+        - Update README with usage example
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Release Tasks
+      options:
+        - label: Bump version in `build.gradle.kts`
+        - label: Create `release/{version}` branch
+        - label: Run "Publish to Maven Central" CI workflow
+        - label: Confirm Git tag was created automatically by JReleaser
+        - label: Confirm artifacts published to Maven Central
+        - label: Close related issues
+        - label: Announce release (optional)
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Anything else to keep in mind?
+      placeholder: Optional

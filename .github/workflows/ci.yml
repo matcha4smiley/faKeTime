@@ -74,4 +74,9 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          distribution: '
+          distribution: 'temurin'
+          java-version: 17
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
+      - name: Test (sample)
+        run: ./gradlew :sample:test --no-daemon

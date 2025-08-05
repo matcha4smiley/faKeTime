@@ -1,5 +1,11 @@
 <img src="docs/images/faKeTime_Logo.png" alt="faKeTime logo" style="width:30%;"/>
 
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.matcha4smiley/faketime?label=Maven%20Central)](https://central.sonatype.com/artifact/io.github.matcha4smiley/faketime)
+[![License](https://img.shields.io/github/license/matcha4smiley/faKeTime)](LICENSE)
+[![Newcomers Welcome](https://img.shields.io/badge/newcomers-welcome-brightgreen.svg)](https://github.com/matcha4smiley/faKeTime/contribute)
+[![GitHub Stars](https://img.shields.io/github/stars/matcha4smiley/faKeTime?style=social)](https://github.com/matcha4smiley/faKeTime/stargazers)
+[![Contributors](https://img.shields.io/github/contributors/matcha4smiley/faKeTime)](https://github.com/matcha4smiley/faKeTime/graphs/contributors)
+
 # faKeTime（フェイクタイム）
 
 ⏳ Kotlin で時間を自在にコントロールするためのテスト支援ライブラリです。  
@@ -95,11 +101,14 @@ repositories {
 
 ---
 
-## 📖 ドキュメント
+## 📖 ドキュメント＆ポリシー
 
 - [コントリビュートガイド（日本語）](docs/CONTRIBUTING.ja.md)
 - [Contributing Guide (EN)](docs/CONTRIBUTING.md)
 - [ディスカッションはこちら](https://github.com/matcha4smiley/faKeTime/discussions)
+- [Code of Conduct](docs/CODE_OF_CONDUCT.md)
+- [Security Policy](docs/SECURITY.md)
+- [Discussions](https://github.com/matcha4smiley/faKeTime/discussions)
 
 ---
 
@@ -116,4 +125,4 @@ repositories {
 
 ## 📝 ライセンス
 
-Apache License 2.0
+[Apache License 2.0](LICENSE)

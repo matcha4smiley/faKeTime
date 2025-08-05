@@ -76,6 +76,13 @@ IntelliJ IDEA で保存時に自動フォーマットするよう設定すると
 
 ## 🌱 Issue・Pull Request の流れ
 
+### 📝 Issueの作成について
+
+このリポジトリでは、**どなたでもIssueを作成できます**。  
+バグ報告・機能要望など、[新しいIssueを作成](https://github.com/matcha4smiley/faKeTime/issues/new) して、お気軽にご投稿ください！
+
+> ※すでに同じ内容の [既存Issue](https://github.com/matcha4smiley/faKeTime/issues) がないかだけご確認ください。
+
 ### ブランチの命名規則
 
 すべてのブランチは以下の形式で命名してください：
@@ -95,7 +102,14 @@ feature/faketime-{issue番号}-{概要（任意）}
 - [ ] 必要に応じてテストを追加または更新した
 - [ ] すべてのテストが成功する
 
-> PR 作成時にテンプレートが自動で読み込まれます — ガイドに沿って記入してください。
+> **複数のPRテンプレートを用意しています：**
+> - Feature（新機能）
+> - Bug Fix（バグ修正）
+> - Documentation Update（ドキュメント）
+> - Release（リリース用）  
+
+> PR作成時に内容に合ったテンプレートを**必ず選択してください**。
+>（GitHubの画面で選択肢が表示されます。デフォルトはありません）
 
 ---
 

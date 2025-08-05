@@ -76,6 +76,13 @@ You can also configure your IDE (e.g. IntelliJ IDEA) to run ktlint automatically
 
 ## 🌱 Issue & Pull Request Workflow
 
+### 📝 Creating Issues
+
+Anyone can create an issue in this repository!  
+Feel free to [open a new issue](https://github.com/matcha4smiley/faKeTime/issues/new) to report bugs, request features.
+
+> **Tip:** Please check [existing issues](https://github.com/matcha4smiley/faKeTime/issues) before creating a new one to avoid duplicates.
+
 ### Branch Naming Convention
 
 Use the following pattern for all contributions:
@@ -95,7 +102,14 @@ Examples:
 - [ ] Tests are added or updated if needed
 - [ ] All tests pass
 
-> _A PR template will be automatically loaded when you create a pull request — please follow it for clarity and consistency._
+> **We provide multiple PR templates:**
+> - Feature
+> - Bug Fix
+> - Documentation Update
+> - Release
+
+> When creating a pull request, **please select the most appropriate template** for your change type.  
+> (The GitHub UI will show you a template selection dialog — there is no default; you must pick one.)
 
 ---
 

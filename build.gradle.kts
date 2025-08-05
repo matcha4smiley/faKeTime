@@ -5,7 +5,10 @@ plugins{
     kotlin("jvm") version "1.9.10" apply false
     `java-library`
     id("org.jreleaser") version "1.19.0"
+    id("com.diffplug.spotless") version "6.25.0"
 }
+
+version = "0.1.1"
 
 java {
     withSourcesJar()
@@ -14,7 +17,6 @@ java {
 
 allprojects {
     group = "io.github.matcha4smiley"
-    version = "0.1.1"
 
     repositories {
         mavenCentral()
@@ -26,8 +28,18 @@ subprojects {
     apply(plugin = "org.jetbrains.kotlin.jvm")
     apply(plugin = "java-library")
     apply(plugin = "maven-publish")
+    apply(plugin = "com.diffplug.spotless")
 
-    version = "0.1.1"
+    spotless {
+        kotlin {
+            target("**/*.kt")
+            ktlint("1.2.1")
+        }
+        kotlinGradle {
+            target("*.gradle.kts")
+            ktlint()
+        }
+    }
 
     tasks.withType<Test> {
         useJUnitPlatform()
@@ -88,7 +100,7 @@ subprojects {
             gitRootSearch = true
             project {
                 name = "faketime"
-                version = "0.1.1"
+                version = project.version.toString()
                 description = "A Kotlin library to fake time during testing"
                 authors = listOf("matcha4smiley")
                 license = "Apache-2.0"

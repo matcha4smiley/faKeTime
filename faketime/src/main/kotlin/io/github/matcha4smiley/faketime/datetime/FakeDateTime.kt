@@ -5,10 +5,10 @@ import java.time.Instant
 
 interface FakeDateTime {
     fun instant(): Instant
+
     fun unixTime(): Long
 
     companion object {
-        fun fixed(fixedInstant: Instant): FakeDateTime =
-            FixedFakeDateTime(fixedInstant)
+        fun fixed(fixedInstant: Instant): FakeDateTime = FixedFakeDateTime(fixedInstant)
     }
 }

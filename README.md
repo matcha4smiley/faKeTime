@@ -8,9 +8,12 @@ Freeze, tick, shift, and format time as you like.
 
 ---
 
-## 🚀 Example (planned)
+## 🚀 Example
 
 ```kotlin
+import io.github.matcha4smiley.faketime.FakeDateTime
+import java.time.Instant
+
 val fakeDateTime = FakeDateTime.fixed(Instant.parse("2025-07-30T12:00:00Z"))
 fakeDateTime.instant()     // → 2025-07-30T12:00:00Z
 fakeDateTime.unixTime()    // → 1753915200
@@ -36,7 +39,7 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.matcha4smiley:faketime:0.1.0")
+    implementation("io.github.matcha4smiley:faketime:0.1.1")
 }
 ```
 
@@ -48,7 +51,7 @@ dependencies {
 > Here's what's been done and what's coming next!
 
 ### ✅ Released
-- ✅ GitHub Packages: Initial release (`0.1.0`)
+- ✅ GitHub Packages: Initial release (`0.1.1`)
 - ✅ Core API: `FakeDateTime.fixed(...)`
 
 ---

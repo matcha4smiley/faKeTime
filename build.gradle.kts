@@ -14,7 +14,7 @@ java {
 
 allprojects {
     group = "io.github.matcha4smiley"
-    version = "0.1.0"
+    version = "0.1.1"
 
     repositories {
         mavenCentral()
@@ -27,7 +27,7 @@ subprojects {
     apply(plugin = "java-library")
     apply(plugin = "maven-publish")
 
-    version = "0.1.0"
+    version = "0.1.1"
 
     tasks.withType<Test> {
         useJUnitPlatform()
@@ -88,7 +88,7 @@ subprojects {
             gitRootSearch = true
             project {
                 name = "faketime"
-                version = "0.1.0"
+                version = "0.1.1"
                 description = "A Kotlin library to fake time during testing"
                 authors = listOf("matcha4smiley")
                 license = "Apache-2.0"

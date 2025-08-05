@@ -1,7 +1,11 @@
+<img src="docs/images/faKeTime_Logo.png" alt="faKeTime logo" style="width:30%;"/>
+
 # faKeTime
 
 ⏳ A fake time control library for Kotlin.  
 Freeze, tick, shift, and format time as you like.
+
+> 🇯🇵 日本語版 README は [こちら](README.ja.md) からご覧いただけます。
 
 > 🧪 **Currently in early development phase** — core API is under construction.  
 > Follow or ⭐️ Star to get updates as features are added!
@@ -23,25 +27,41 @@ fakeDateTime.unixTime()    // → 1753915200
 
 ## 📦 Installation
 
-This library will be published to **Maven Central** soon.
+faKeTime is available on **Maven Central** 🎉
 
-For now, you can use it via **GitHub Packages**:
+### Gradle (Kotlin DSL)
+
+```kotlin
+dependencies {
+  implementation("io.github.matcha4smiley:faketime:0.1.1")
+}
+```
+
+### Gradle (Groovy)
+
+```groovy
+dependencies {
+  implementation 'io.github.matcha4smiley:faketime:0.1.1'
+}
+```
+
+Make sure to include Maven Central in your repositories (default in most Gradle setups):
 
 ```kotlin
 repositories {
-    maven {
-        url = uri("https://maven.pkg.github.com/matcha4smiley/faKeTime")
-        credentials {
-            username = "<your-github-username>"
-            password = "<your-personal-access-token>"
-        }
-    }
-}
-
-dependencies {
-    implementation("io.github.matcha4smiley:faketime:0.1.1")
+  mavenCentral()
 }
 ```
+
+---
+
+## ❓ Why faKeTime?
+
+- ✅ Test time-sensitive code with ease
+- ✅ Fake time without changing app logic
+- ✅ Supports fixed, ticked, and shifted time models
+- ✅ Familiar API inspired by `java.time`
+- 🕘 Coming soon: `FakeTime` for lightweight clock-based control (without date-time overhead)
 
 ---
 
@@ -56,22 +76,33 @@ dependencies {
 
 ---
 
-### 🛠️ In Progress
-- 🚧 `FakeDateTime.tick(interval: Duration)` – Automatically advance time by fixed intervals
-- 🚧 `FakeDateTime.shift(duration: Duration)` – Manually move time forward/backward
-- 🚧 Support for:
-    - Instant
-    - LocalDateTime
-    - ZonedDateTime
-    - UNIX timestamp (as Long)
-- 🚧 Core methods:
-    - `unixTime()`
-    - `toEpochMilli()`
-    - `toIso8601String()`
+### 🧭 Planned
+- Add `FakeTime` for simulating plain time (e.g. `Long`, `Clock`, `Duration` based)
+- `FakeDateTime.tick(interval: Duration)` – Automatically advance time by fixed intervals
+- `FakeDateTime.shift(duration: Duration)` – Manually move time forward/backward
+- Support for:
+  - Instant
+  - LocalDateTime
+  - ZonedDateTime
+  - UNIX timestamp (as Long)
+- Core methods:
+  - (for `FakeDateTime`)
+  - `unixTime()`
+  - `toEpochMilli()`
+  - `toIso8601String()`
+- Kotlin Multiplatform (KMP) support
 
 ### 📦 Distribution
-- ✅ GitHub Packages support
-- 🚧 Publish to Maven Central
+- ✅ Maven Central release
+- 🗑️ GitHub Packages (deprecated)
+
+---
+
+## 📖 Documentation
+
+- [Contributing Guide (EN)](docs/CONTRIBUTING.md)
+- [コントリビュートガイド（JP）](docs/CONTRIBUTING.ja.md)
+- [Discussions](https://github.com/matcha4smiley/faKeTime/discussions)
 
 ---
 

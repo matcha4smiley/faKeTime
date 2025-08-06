@@ -21,6 +21,13 @@
 
 ---
 
+### CheckList
+
+- [ ] Code is **auto-formatted using `./gradlew spotlessApply`**
+- [ ] `./gradlew spotlessCheck` passes with no errors
+- [ ] Tests are added or updated if needed
+- [ ] All tests pass
+
 ### Testing
 
 <!-- How was this tested? Screenshots or steps if applicable -->

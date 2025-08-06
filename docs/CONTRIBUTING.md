@@ -102,14 +102,9 @@ Examples:
 - [ ] Tests are added or updated if needed
 - [ ] All tests pass
 
-> **We provide multiple PR templates:**
-> - Feature
-> - Bug Fix
-> - Documentation Update
-> - Release
-
-> When creating a pull request, **please select the most appropriate template** for your change type.  
-> (The GitHub UI will show you a template selection dialog — there is no default; you must pick one.)
+>We provide a single, general-purpose Pull Request template.  
+>When creating a pull request, the template will be loaded automatically.  
+>Please fill in all relevant sections to help reviewers understand your change.
 
 ---
 

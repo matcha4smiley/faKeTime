@@ -1,4 +1,7 @@
 <img src="docs/images/faKeTime_Logo.png" alt="faKeTime logo" style="width:30%;"/>
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.matcha4smiley/faketime?label=Maven%20Central)](https://central.sonatype.com/artifact/io.github.matcha4smiley/faketime)
 [![License](https://img.shields.io/github/license/matcha4smiley/faKeTime)](LICENSE)
@@ -126,3 +129,24 @@ feel free to open an [issue](https://github.com/matcha4smiley/faKeTime/issues) o
 ## 📝 License
 
 - [License: Apache License 2.0](LICENSE)
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/matcha4smiley"><img src="https://avatars.githubusercontent.com/u/158127859?v=4?s=100" width="100px;" alt="ryo.saito"/><br /><sub><b>ryo.saito</b></sub></a><br /><a href="https://github.com/matcha4smiley/faKeTime/commits?author=matcha4smiley" title="Code">💻</a> <a href="https://github.com/matcha4smiley/faKeTime/commits?author=matcha4smiley" title="Documentation">📖</a> <a href="https://github.com/matcha4smiley/faKeTime/issues?q=author%3Amatcha4smiley" title="Bug reports">🐛</a> <a href="#ideas-matcha4smiley" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-matcha4smiley" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/matcha4smiley/faKeTime/pulls?q=is%3Apr+reviewed-by%3Amatcha4smiley" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

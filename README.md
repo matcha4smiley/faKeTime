@@ -5,6 +5,7 @@
 [![Newcomers Welcome](https://img.shields.io/badge/newcomers-welcome-brightgreen.svg)](https://github.com/matcha4smiley/faKeTime/contribute)
 [![GitHub Stars](https://img.shields.io/github/stars/matcha4smiley/faKeTime?style=social)](https://github.com/matcha4smiley/faKeTime/stargazers)
 [![Contributors](https://img.shields.io/github/contributors/matcha4smiley/faKeTime)](https://github.com/matcha4smiley/faKeTime/graphs/contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#-contributors)
 
 # faKeTime
 
@@ -120,6 +121,15 @@ It really motivates me and helps the project grow.
 
 Feedback, ideas, and contributions are all welcome —  
 feel free to open an [issue](https://github.com/matcha4smiley/faKeTime/issues) or start a [discussion](https://github.com/matcha4smiley/faKeTime/discussions).
+
+---
+
+## ✨ Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/all-contributors/all-contributors/blob/master/docs/emoji-key.md)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ---
 

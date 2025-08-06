@@ -90,7 +90,7 @@ repositories {
 ### 🚀 今後の予定
 
 #### **v0.2.0**
-- `FakeDateTime.ticked(...)` および `FakeDateTime.shifted(...)` の追加（Instant & unixTime のみ対応）
+- `FakeDateTime.ticked(...)` および `FakeDateTime.adjustable(...)` の追加（Instant & unixTime のみ対応）
 - 新機能のテスト追加
 
 #### **v0.3.0 ～ v0.8.0**

@@ -71,33 +71,51 @@ repositories {
 
 ## 📅 開発ロードマップ
 
-> 🚧 ライブラリは現在も積極的に開発中です。  
-> 実装済みのもの、今後追加予定の機能は以下のとおりです。
-
-### ✅ 実装済み
-- ✅ GitHub Packages にて初回リリース（`0.1.1`）
-- ✅ `FakeDateTime.fixed(...)` を提供
+> 🚧 このロードマップは開発の進行やフィードバック、優先度、新しいアイデアなどに応じて**変更される場合があります**。  
+> 機能提案やコントリビューションもいつでも歓迎です！
 
 ---
 
-### 🧭 今後の予定（Planned）
-- `FakeTime`：日付なしの時刻制御（LongやClockベース）
-- `FakeDateTime.tick(interval: Duration)`：一定間隔で自動進行
-- `FakeDateTime.shift(duration: Duration)`：手動で時間を進めたり戻したり
-- 対応予定の型：
-    - Instant
-    - LocalDateTime
-    - ZonedDateTime
-    - UNIX timestamp（Long型）
-- 実装予定のメソッド：
-    - `unixTime()`
-    - `toEpochMilli()`
-    - `toIso8601String()`
-- Kotlin Multiplatform（KMP）対応
+### ✅ リリース済み
 
-### 📦 配布について
-- ✅ Maven Central で提供中
-- 🗑️ GitHub Packages は非推奨（提供終了）
+#### **v0.1.0**: 初回リリース – GitHub Packages & Maven Centralに公開
+- `FakeDateTime.fixed(...)`（コアAPI）を含む
+
+#### **v0.1.1**:
+- より簡単なインポートのためのtypealias追加、およびREADME修正 ([#20](https://github.com/matcha4smiley/faKeTime/pull/20))
+- `FakeDateTimeSample.kt` 使用例サンプルの追加 ([#22](https://github.com/matcha4smiley/faKeTime/pull/22))
+
+---
+
+### 🚀 今後の予定
+
+#### **v0.2.0**
+- `FakeDateTime.ticked(...)` および `FakeDateTime.shifted(...)` の追加（Instant & unixTime のみ対応）
+- 新機能のテスト追加
+
+#### **v0.3.0 ～ v0.8.0**
+- 追加の時間型への対応拡張  
+  （例: `LocalDateTime`, `ZonedDateTime`, UNIXタイムスタンプ など）
+- シンプルな時間操作用 `FakeTime`（`Long`, `Clock`, `Duration` 対応）の実装
+- 追加ユーティリティ・変換メソッド（`unixTime()`, `toEpochMilli()` など）の導入
+- **Kotlin Multiplatform (KMP) 対応**  
+  （JVM・JS・Native対応）
+- ドキュメントや使用例の充実
+- フィードバックに基づくAPIの改善
+
+#### **v0.9.0**
+- 正式リリース前の最終調整
+  - APIの最終レビュー＆調整
+  - ドキュメント・使用例の総仕上げ
+  - バグ修正・リファクタリング
+  - 安定版リリース準備
+
+#### **v1.0.0**
+- **安定版リリース**
+- 最終的な機能セットやAPIは、今後のフィードバックやテスト、コミュニティの要望を踏まえて決定
+
+> このスケジュールはあくまで目安であり、開発の進行に応じて変更されることがあります。  
+> 機能提案・フィードバック・コントリビュートは [Discussions](https://github.com/matcha4smiley/faKeTime/discussions) でいつでもお待ちしています！
 
 ---
 

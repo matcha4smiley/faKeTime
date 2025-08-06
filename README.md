@@ -96,7 +96,7 @@ repositories {
 ### 🚀 Upcoming Plans
 
 #### **v0.2.0**
-- Add `FakeDateTime.ticked(...)` and `FakeDateTime.shifted(...)` (Instant & unixTime only)
+- Add `FakeDateTime.ticked(...)` and `FakeDateTime.adjustable(...)` (Instant & unixTime only)
 - Add test coverage for new features
 
 #### **v0.3.0 – v0.8.0**

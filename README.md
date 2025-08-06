@@ -1,4 +1,7 @@
 <img src="docs/images/faKeTime_Logo.png" alt="faKeTime logo" style="width:30%;"/>
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.matcha4smiley/faketime?label=Maven%20Central)](https://central.sonatype.com/artifact/io.github.matcha4smiley/faketime)
 [![License](https://img.shields.io/github/license/matcha4smiley/faKeTime)](LICENSE)
@@ -74,30 +77,53 @@ repositories {
 
 ## 📅 Roadmap
 
-> 🚧 This library is under active development.  
-> Here's what's been done and what's coming next!
-
-### ✅ Released
-- ✅ GitHub Packages: Initial release (`0.1.1`)
-- ✅ Core API: `FakeDateTime.fixed(...)`
+> 🚧 This roadmap is a work in progress and **subject to change** based on feedback, priorities, and new ideas.  
+> Contributions and suggestions are always welcome!
 
 ---
 
-### 🧭 Planned
-- Add `FakeTime` for simulating plain time (e.g. `Long`, `Clock`, `Duration` based)
-- `FakeDateTime.tick(interval: Duration)` – Automatically advance time by fixed intervals
-- `FakeDateTime.shift(duration: Duration)` – Manually move time forward/backward
-- Support for:
-  - Instant
-  - LocalDateTime
-  - ZonedDateTime
-  - UNIX timestamp (as Long)
-- Core methods:
-  - (for `FakeDateTime`)
-  - `unixTime()`
-  - `toEpochMilli()`
-  - `toIso8601String()`
-- Kotlin Multiplatform (KMP) support
+### ✅ Released
+
+#### **v0.1.0**: Initial release – Published to GitHub Packages & Maven Central
+  - Includes: `FakeDateTime.fixed(...)` (core API)
+
+#### **v0.1.1**:
+- Add typealias for easier import & update README ([#20](https://github.com/matcha4smiley/faKeTime/pull/20))
+- Add `FakeDateTimeSample.kt` usage example ([#22](https://github.com/matcha4smiley/faKeTime/pull/22))
+
+---
+
+### 🚀 Upcoming Plans
+
+#### **v0.2.0**
+- Add `FakeDateTime.ticked(...)` and `FakeDateTime.shifted(...)` (Instant & unixTime only)
+- Add test coverage for new features
+
+#### **v0.3.0 – v0.8.0**
+- Expand support for additional time types  
+  (e.g., `LocalDateTime`, `ZonedDateTime`, UNIX timestamp)
+- Implement `FakeTime` for simulating plain time (`Long`, `Clock`, `Duration`)
+- Add more utility and conversion methods (`unixTime()`, `toEpochMilli()`, etc.)
+- **Kotlin Multiplatform (KMP) support**  
+  (JVM, JS, Native compatibility)
+- Improve documentation and usage examples
+- Refine core API based on feedback
+
+#### **v0.9.0**
+- Pre-release finalization:
+- Final API review & polish
+- Comprehensive documentation & samples
+- Bug fixes & refactoring
+- Prepare for stable release
+
+#### **v1.0.0**
+- **Stable release**
+- Final feature set and API determined based on feedback, testing, and community needs
+
+> This schedule is a guideline and may change as the project evolves.  
+> If you have feature ideas, feedback, or want to help, please join the [Discussions](https://github.com/matcha4smiley/faKeTime/discussions)!
+
+---
 
 ### 📦 Distribution
 - ✅ Maven Central release
@@ -136,3 +162,24 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/all-contri
 ## 📝 License
 
 - [License: Apache License 2.0](LICENSE)
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/matcha4smiley"><img src="https://avatars.githubusercontent.com/u/158127859?v=4?s=100" width="100px;" alt="ryo.saito"/><br /><sub><b>ryo.saito</b></sub></a><br /><a href="https://github.com/matcha4smiley/faKeTime/commits?author=matcha4smiley" title="Code">💻</a> <a href="https://github.com/matcha4smiley/faKeTime/commits?author=matcha4smiley" title="Documentation">📖</a> <a href="https://github.com/matcha4smiley/faKeTime/issues?q=author%3Amatcha4smiley" title="Bug reports">🐛</a> <a href="#ideas-matcha4smiley" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-matcha4smiley" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/matcha4smiley/faKeTime/pulls?q=is%3Apr+reviewed-by%3Amatcha4smiley" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

@@ -9,7 +9,8 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.matcha4smiley:faketime:0.1.1")
+    testImplementation("io.github.matcha4smiley:faketime:0.1.1")
+    testImplementation(kotlin("test"))
 }
 
 application {

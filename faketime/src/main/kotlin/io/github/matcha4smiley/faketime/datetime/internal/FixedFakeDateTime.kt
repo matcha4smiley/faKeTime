@@ -7,6 +7,5 @@ internal class FixedFakeDateTime(
     private val instant: Instant,
 ) : FakeDateTime {
     override fun instant(): Instant = instant
-
     override fun unixTime(): Long = instant.epochSecond
 }

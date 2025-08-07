@@ -1,7 +1,4 @@
 <img src="docs/images/faKeTime_Logo.png" alt="faKeTime logo" style="width:30%;"/>
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.matcha4smiley/faketime?label=Maven%20Central)](https://central.sonatype.com/artifact/io.github.matcha4smiley/faketime)
 [![License](https://img.shields.io/github/license/matcha4smiley/faKeTime)](LICENSE)
@@ -12,8 +9,8 @@
 
 # faKeTime
 
-⏳ A fake time control library for Kotlin.  
-Freeze, tick, shift, and format time as you like.
+⏳ A time manipulation library for **testing Kotlin applications**.  
+Freeze, tick, shift, and assert time with precision.
 
 > 🇯🇵 日本語版 README は [こちら](README.ja.md) からご覧いただけます。
 
@@ -67,11 +64,25 @@ repositories {
 
 ## ❓ Why faKeTime?
 
-- ✅ Test time-sensitive code with ease
-- ✅ Fake time without changing app logic
-- ✅ Supports fixed, ticked, and shifted time models
-- ✅ Familiar API inspired by `java.time`
-- 🕘 Coming soon: `FakeTime` for lightweight clock-based control (without date-time overhead)
+faKeTime is designed specifically for **testing time-sensitive code**.
+
+✅ **Make time deterministic** — avoid flaky tests caused by system clocks  
+✅ **Inject fake time** without changing your production logic  
+✅ Easily switch between:
+- 🧊 `fixed` time (e.g., freeze now)
+- ⏩ `ticked` time (advance on each call)
+- ⏱️ `adjustable` time (manually jump or shift time)
+
+✅ Familiar API based on `java.time` and `kotlin.time`  
+✅ Write **cleaner tests** without custom time wrappers or boilerplate  
+✅ Great for testing:
+- Scheduling logic
+- Timeouts and retries
+- Expiration and TTLs
+- Delayed tasks
+- Any time-dependent logic
+
+🕘 Coming soon: `FakeTime` for lighter use cases without date-time overhead
 
 ---
 
@@ -95,19 +106,16 @@ repositories {
 
 ### 🚀 Upcoming Plans
 
-#### **v0.2.0**
-- Add `FakeDateTime.ticked(...)` and `FakeDateTime.adjustable(...)` (Instant & unixTime only)
-- Add test coverage for new features
-
-#### **v0.3.0 – v0.8.0**
+#### **v0.2.0 – v0.8.0: Feature Expansion Phase**
+- Add `FakeDateTime.ticked(...)` and `FakeDateTime.adjustable(...)` (for `Instant` & `unixTime`)
 - Expand support for additional time types  
   (e.g., `LocalDateTime`, `ZonedDateTime`, UNIX timestamp)
-- Implement `FakeTime` for simulating plain time (`Long`, `Clock`, `Duration`)
-- Add more utility and conversion methods (`unixTime()`, `toEpochMilli()`, etc.)
-- **Kotlin Multiplatform (KMP) support**  
+- Introduce `FakeTime` for simulating plain time (`Long`, `Clock`, `Duration`)
+- Add utility & conversion methods (`unixTime()`, `toEpochMilli()`, etc.)
+- Improve test coverage & usage examples
+- Begin **Kotlin Multiplatform (KMP)** support  
   (JVM, JS, Native compatibility)
-- Improve documentation and usage examples
-- Refine core API based on feedback
+- Continuously refine core API based on feedback
 
 #### **v0.9.0**
 - Pre-release finalization:
@@ -129,6 +137,16 @@ repositories {
 - ✅ Maven Central release
 - 🗑️ GitHub Packages (deprecated)
 
+---  
+## 🧪 Who is it for?
+
+If you're writing **unit tests** or **integration tests** that depend on time —  
+`faKeTime` helps you control and assert time with precision and zero flakiness.
+
+No more:
+- Custom clock wrappers
+- Thread.sleep hacks
+- Unstable system time assertions  
 ---
 
 ## 📖 Documentation & Policies
